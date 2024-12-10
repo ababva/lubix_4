@@ -1,0 +1,7 @@
+# created by virtualenv automatically
+../.venv/Lib
+.idea
+.pytest_cache
+.venv
+.vscode
+__pycache__
