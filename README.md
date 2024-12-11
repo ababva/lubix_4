@@ -134,7 +134,7 @@ BSWAP 16 11 10
 25,0
 ```
 # Ассемблер
-## Проверить, что инструкция LOAD корректно обрабатывается и генерирует правильный двоичный код
+## Проверка, что инструкция LOAD корректно обрабатывается и генерирует правильный двоичный код
 ```def test_load(setup_files):
     asm_file, bin_file, log_file = setup_files
     asm_file.write_text("LOAD 12 70\n")
@@ -143,7 +143,7 @@ BSWAP 16 11 10
     with open(bin_file, "rb") as f:
         assert f.read() == bytes([0xCC, 0x08])
 ```
-## Проверить, что инструкция READ корректно обрабатывается и генерирует правильный двоичный код.
+## Проверка, что инструкция READ корректно обрабатывается и генерирует правильный двоичный код.
 ``` def test_read(setup_files):
     asm_file, bin_file, log_file = setup_files
     asm_file.write_text("READ 8 63\n")
@@ -152,7 +152,7 @@ BSWAP 16 11 10
     with open(bin_file, "rb") as f:
         assert f.read() == bytes([0xE8, 0x07, 0x00, 0x00, 0x00])
 ```
-## Проверить, что инструкция WRITE корректно обрабатывается и генерирует правильный двоичный код.
+## Проверка, что инструкция WRITE корректно обрабатывается и генерирует правильный двоичный код.
 ```def test_write(setup_files):
     asm_file, bin_file, log_file = setup_files
     asm_file.write_text("WRITE 24 451\n")
@@ -161,7 +161,7 @@ BSWAP 16 11 10
     with open(bin_file, "rb") as f:
         assert f.read() == bytes([0x78, 0x38, 0x00, 0x00, 0x00])
 ```
-## Проверить, что инструкция BSWAP корректно обрабатывается и генерирует правильный двоичный код.
+## Проверка, что инструкция BSWAP корректно обрабатывается и генерирует правильный двоичный код.
 ```def test_bswap(setup_files):
     asm_file, bin_file, log_file = setup_files
     asm_file.write_text("BSWAP 16 195 606\n")
